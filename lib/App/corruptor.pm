@@ -31,8 +31,8 @@ _
         # XXX arg: block mode or byte mode
         proportion => {
             summary => 'How much random data is written '.
-                'as proportion of file size',
-            schema => ['share*', xmin=>0],
+                'as proportion of file size (in percent)',
+            schema => ['percent*', xmin=>0, max=>100],
             req => 1,
             cmdline_aliases => {p=>{}},
         },
@@ -43,7 +43,7 @@ _
     examples => [
         {
             summary => 'Corrupt two files by writing 1% random bytes',
-            argv => ['disk.img', 'disk2.img', '-p1'],
+            argv => ['disk.img', 'disk2.img', '-p1%'],
             test => 0,
             'x.doc.show_result' => 0,
         },
