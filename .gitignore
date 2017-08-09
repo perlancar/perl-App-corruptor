@@ -1,0 +1,4 @@
+App-corruptor-*
+.build
+*~
+nytprof*
